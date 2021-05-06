@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kyle tamagochi</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="titleText">
+      <h1>Kanna-chan</h1>
+    </div>
+
+    <div id="kanna">
+      <p align="Center">
+        <img
+          id="kanna_chan"
+          src="https://media1.tenor.com/images/5f08ccadfab581517f073245adb5f68c/tenor.gif?itemid=8087657"
+          width="250"
+          height="325"
+        />
+      </p>
+    </div>
+
+    <div id="sleepBar">
+      <p align="Center">
+        Sleep: <progress id="sleep" min="0" max="100" value="100"></progress>
+      </p>
+    </div>
+    <div id="hungerBar">
+      <p align="Center">
+        Hunger: <progress id="hunger" min="0" max="100" value="100"></progress>
+      </p>
+    </div>
+    <div id="thirstBar">
+      <p align="Center">
+        Dehydration:<progress
+          id="thirst"
+          min="0"
+          max="100"
+          value="100"
+        ></progress>
+      </p>
+    </div>
+
+    <div id="buttons">
+      <button id="sleepButton">Sleep</button>
+      <button id="hungerButton">Eat</button>
+      <button id="thirstButton">Drink</button>
+    </div>
+
+    <div id="footer">
+      <p>
+        <small>
+          HOW TO PLAY:<br />Press the buttons to fill your dragon pet needs.
+          <br />If empty, you won't be able to fill the bar again! <br />If all
+          three get to 0, You GO TO JAIL!
+        </small>
+      </p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

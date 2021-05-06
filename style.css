@@ -1,0 +1,109 @@
+body {
+  background-color: #121212;
+}
+
+#titleText {
+  color: #b48608;
+  font-family: "Droid serif", serif;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 44px;
+  margin: auto;
+  text-align: center;
+}
+
+#sleepBar {
+  font-family: "Droid serif", serif;
+  margin: auto;
+  color: #ffffff;
+  margin-left: 14px;
+}
+
+#hungerBar {
+  font-family: "Droid serif", serif;
+  margin: auto;
+  color: #ffffff;
+}
+
+#thirstBar {
+  font-family: "Droid serif", serif;
+  margin: auto;
+  color: #ffffff;
+  margin-right: 33px;
+}
+
+#footer {
+  font-family: "Droid serif", serif;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 50px;
+  margin: auto;
+}
+
+:root {
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --font-family: "Droid serif", serif;
+  --color-primary: white;
+  --color-secondary: black;
+  --color-tertiary: black;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --space: 1rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+#buttons {
+  display: flex;
+  width: 20%;
+  box-shadow: var(--shadow) 4px 4px;
+  margin: auto;
+}
+
+#buttons button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  padding: calc(var(--space) / 1.125) var(--space) var(--space);
+  border: var(--border-size) solid black;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+  text-transform: lowercase;
+  text-shadow: var(--shadow) 2px 2px;
+  transition: flex-grow var(--duration) var(--ease);
+}
+
+#buttons button + button {
+  border-left: var(--border-size) solid black;
+  margin-left: calc(var(--border-size) * -1);
+}
+
+#buttons button:hover,
+#buttons button:focus {
+  flex-grow: 2;
+  color: white;
+  outline: none;
+  text-shadow: none;
+  background-color: var(--color-secondary);
+}
+
+#buttons button:focus {
+  outline: var(--border-size) dashed var(--color-primary);
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+#buttons:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+#buttons button:active {
+  transform: translateY(var(--border-size));
+}
